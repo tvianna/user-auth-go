@@ -1,4 +1,4 @@
 # user-auth-go
 
 ## Utils
-[Postman collection](./postman_collection.json)
+[Postman collection](auth-go.postman_collection.json.)
