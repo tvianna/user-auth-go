@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    container_name: user-auth-go-api
+    build: .
+    ports: 
+      - 8080:8080 
+    restart: on-failure
+    depends_on:
+      - db      
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${DB_NAME}"
+    ports:
+      - '3306:3306'
+    expose: 
+      - "3306"
+volumes:
+  db:
+    driver: local

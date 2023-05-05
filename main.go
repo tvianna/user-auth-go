@@ -3,7 +3,6 @@ package main
 import (
 	"auth-go/database"
 	"auth-go/routes"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
@@ -21,5 +20,5 @@ func main() {
 
 	routes.Setup(app)
 
-	app.Listen(":8000")
+	app.Listen(":8080")
 }
